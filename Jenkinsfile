@@ -7,7 +7,7 @@ pipeline {
     }
 */
     environment {
-        registry = "imranvisualpath/vproappdock"
+        registry = "sandeepjammi/vproappdock2"
         registryCredential = 'dockerhub'
     }
 
@@ -77,7 +77,7 @@ pipeline {
         stage('CODE ANALYSIS with SONARQUBE') {
 
             environment {
-                scannerHome = tool 'mysonarscanner4'
+                scannerHome = tool 'sonar4.7'
             }
 
             steps {
